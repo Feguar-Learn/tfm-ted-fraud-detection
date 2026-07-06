@@ -1,0 +1,41 @@
+# Entorno de ejecución del TFM (Python 3.12)
+# Instalado y verificado con: pip freeze del env_analytics
+#
+#   python -m venv env_analytics
+#   source env_analytics/bin/activate   # Windows: env_analytics\Scripts\activate
+#   pip install -r requirements.txt
+#
+# NOTA Java: PySpark (Spark 4.x) requiere un JDK del sistema 17 o 21; Java 8/11 no son compatibles. No es un paquete pip.
+
+# --- Core numérico ---
+numpy==2.4.6
+pandas==2.3.3
+pyarrow==25.0.0
+
+# --- Spark (Fases 1-2: limpieza, cruce CAN/CN, feature engineering) ---
+pyspark==4.2.0
+
+# --- Machine learning ---
+scikit-learn==1.9.0
+joblib==1.5.3
+
+# --- Deep learning (Fase 4: autoencoder, DNN, experimentos A/B) ---
+tensorflow_cpu==2.21.0
+
+# --- Interpretabilidad (Fase 5) ---
+shap==0.52.0
+
+# --- Visualización (EDA, figuras de memoria y anexos) ---
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# --- Jupyter ---
+jupyter==1.1.1
+notebook==7.6.0
+nbconvert==7.17.1
+ipykernel==7.3.0
+
+# --- Generación de documentos (memoria y anexos DOCX/PDF) ---
+python-docx==1.2.0
+reportlab==5.0.0
+pymupdf==1.28.2

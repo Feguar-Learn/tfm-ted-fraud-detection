@@ -1,0 +1,108 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+develop-eggs/
+
+# --- Entornos virtuales ---
+.venv/
+venv/
+env/
+env_analytics/
+**/.venv/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.ipynb_meta
+notebooks/.ipynb_checkpoints/
+
+# --- Datos (volumen grande, NO se suben al repo) ---
+data/raw/*
+data/processed/*
+data/features/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/features/.gitkeep
+
+# --- Modelos serializados: SI se suben (pesan ~15 MB en total) ---
+# models/ se versiona completo; solo se excluyen formatos de checkpoints de deep learning
+models/*.pth
+models/*.pt
+models/*.gz
+
+# --- Dashboard: ficheros pesados fuera; capturas dentro ---
+dashboard/ted_muestra_500k.csv
+dashboard/ted_muestra_200k.csv
+dashboard/.cache/
+
+# --- Notebooks: copias de seguridad, cache y venv anidado ---
+notebooks/*.bak
+notebooks/*.bak2
+notebooks/models/
+notebooks/.venv/
+notebooks/__pycache__/
+
+# --- Spark / Hadoop ---
+derby.log
+metastore_db/
+spark-warehouse/
+hadoop-*/
+
+# --- Salidas y logs ---
+logs/
+*.log
+*.out
+outputs/
+
+# --- OpenCode / OMO ---
+.omo/
+.codegraph
+!*.opencode.json
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# --- Editores ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- DOCX temporales / Office cache ---
+~$*.docx
+~$*.odt
+.~lock.*#
+# --- Backups de memoria ---
+docs/*.bak.docx
+docs/*.bak.md
+
+# --- Material del máster (4,7 GB: videos, datasets de tareas, PDFs de asignaturas) ---
+Documentacion_Master/
+info/hadoop/
+
+# --- Material retirado, local únicamente (no existe en la entrega) ---
+models/Old/
+docs/figuras_old/
+dashboard/Old/
+
+# --- Backups y volcados del notebook ---
+notebooks/*.bak*
+docs/TFM_analysis.html
+
+# --- Metadatos de Hadoop/Spark (ruido: checksums y marcadores) ---
+*.crc
+_SUCCESS
+._SUCCESS
+
+# --- Documentación institucional del máster (no redistribuir) ---
+info/
